@@ -5,9 +5,7 @@ function Error() {
     return (
         <>
             <h1>Erreur</h1>
-            <p>
-                <Link to={'/'}>Home</Link>
-            </p>
+            
         </>
     )
 
