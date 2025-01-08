@@ -1,0 +1,22 @@
+.gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 40px;
+  margin-inline: 50px;
+  padding: 50px;
+  background-color: #F6F6F6;
+  border-radius: 25px;
+}
+
+.gallery::after {
+  content: "";
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 calc(33.3333333333% - 40px);
+          flex: 1 0 calc(33.3333333333% - 40px);
+}/*# sourceMappingURL=Gallery.module.css.map */

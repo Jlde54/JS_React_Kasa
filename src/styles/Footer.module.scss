@@ -1,0 +1,15 @@
+@import './-variables.scss';
+@import './-mixins.scss';
+
+.footer {
+    @include flex-column-center;
+    background-color: $black-color;
+    padding-top: 60px;
+    height: 149px;
+    &__text {
+        font-size: 24px;
+        font-weight: 500;
+        text-decoration: none;
+        color: $white-color;
+    }
+}

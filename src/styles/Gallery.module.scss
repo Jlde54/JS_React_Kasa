@@ -1,0 +1,17 @@
+@import './-variables.scss';
+@import './-mixins.scss';
+
+.gallery {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-inline: 50px;
+    padding: 50px;
+    background-color: #F6F6F6;
+    border-radius: 25px;
+}
+.gallery::after {
+    content: '';
+    flex: 1 0 calc((100% / 3) - 40px);
+  }

@@ -1,5 +1,5 @@
-import {Link} from 'react-router-dom'
 import { useParams } from 'react-router-dom'
+import styles from '../styles/Fiche-Logement.module.scss'
 
 function Fiche_Logement() {
 
@@ -7,13 +7,7 @@ function Fiche_Logement() {
 
     return (
         <>
-            <h1>Fiche logement : {param.id}</h1>
-            <p>
-                <Link to={'/'}>Home</Link>
-            </p>
-            <p>
-                <Link to={'/a-propos'}>A propos</Link>
-            </p>
+            <h1 className={styles.h1}>Fiche logement : {param.id}</h1>
         </>
     )
 

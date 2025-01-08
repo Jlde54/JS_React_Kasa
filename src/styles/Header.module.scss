@@ -1,0 +1,17 @@
+@import './-variables.scss';
+@import './-mixins.scss';
+
+.header {
+    @include flex-row-space-between;
+    margin-inline: 100px;
+    &__nav {
+        @include flex-row-space-between;
+        width : 200px;
+    }
+    &__link {
+        font-size: 24px;
+        font-weight: 500;
+        text-decoration: none;
+        color: $black-color;
+    }
+}
