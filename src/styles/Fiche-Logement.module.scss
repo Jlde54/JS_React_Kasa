@@ -1,3 +1,7 @@
-.h1 {
-    color: red;
+@import './-variables.scss';
+@import './-mixins.scss';
+
+.ficheLogement {
+    margin-inline: 100px;
+    margin-block: 50px;
 }

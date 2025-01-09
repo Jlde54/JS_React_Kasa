@@ -7,7 +7,7 @@ function Home() {
     const text = "Chez vous, partout et ailleurs"
     const altText = "Falaise"
     return (
-        <div className={styles.home} >
+        <div className={styles.home}>
             <Banner text={text} img={imgCliff} alt={altText}/>
             <Gallery />
         </div>
