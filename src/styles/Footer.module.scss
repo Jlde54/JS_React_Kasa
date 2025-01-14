@@ -2,14 +2,28 @@
 @import './-mixins.scss';
 
 .footer {
-    @include flex-column-center;
+    @include flexContainer(column, center, center);
     background-color: $black-color;
     padding-top: 60px;
-    height: 149px;
+    height: 209px;
+    &__logo {
+        @include dimension(122px, 40px);
+    }
     &__text {
-        font-size: 24px;
-        font-weight: 500;
+        @include fontStyle(24px, 500);
         text-decoration: none;
         color: $white-color;
+    }
+}
+// Media queries
+
+@media screen and (max-width: 768px) {
+}
+
+@media screen and (max-width: 576px) {
+    .footer {
+        &__text {
+            @include fontStyle(12px, 500);
+        }
     }
 }

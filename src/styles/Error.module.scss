@@ -7,12 +7,11 @@
     text-align: center;
     margin-inline: 50px;
     &__404 {
-        font-size: 288px;
-        font-weight: 700;
+        @include fontStyle (288px, 700);
         margin: 100px 0;
     }
     &__msg {
-        font-size: 36px;
+        @include fontStyle (36px, 500);
         text-decoration: none;
         margin-bottom: 100px;
     }
@@ -21,7 +20,27 @@
     }
     &__link {
         color: $black-color;
-        font-size: 18px;
+        @include fontStyle (18px, 500);
         
+    }
+}
+
+// Media queries
+
+@media screen and (max-width: 992px) {
+
+}
+
+@media screen and (max-width: 576px) {
+    .error {
+        &__404 {
+            @include fontStyle (96px, 700);
+        }
+        &__msg {
+            @include fontStyle (18px, 500);
+        }
+        &__link {
+            @include fontStyle (14px, 500);
+        }
     }
 }

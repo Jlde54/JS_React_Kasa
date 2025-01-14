@@ -5,15 +5,14 @@
     position: relative;
     width: 100%;
     margin: auto;
-  overflow: hidden;
+    overflow: hidden;
     &__wrapper {
         display: flex;
         width: 100%;
         transition: transform 0.5s ease-in-out;
     }
     &__img {
-        height: 415px;
-        width: 100%;
+        @include dimension (100%, 415px);
         object-fit: cover;
         border-radius: 25px;
         flex-shrink: 0;
@@ -30,5 +29,37 @@
     }
     &__arrowRight {
         right: 10px;
+    }
+    &__counter {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 10px;
+        color: white;
+        @include fontStyle (18px, 500);
+    }
+}
+
+// Media queries
+
+@media screen and (max-width: 992px) {
+    .slider {
+        &__img {
+            height: 335px;
+        }
+        &__arrowLeft, &__arrowRight {
+            height: 50px;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .slider {
+        &__img {
+            height: 255px;
+        }
+        &__arrowLeft, &__arrowRight {
+            height: 50px;
+        }
     }
 }

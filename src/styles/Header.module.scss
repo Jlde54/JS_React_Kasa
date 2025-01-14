@@ -2,16 +2,53 @@
 @import './-mixins.scss';
 
 .header {
-    @include flex-row-space-between;
+    @include flexContainer(row, space-between, center);
     margin-inline: 100px;
+    &__logo {
+        @include dimension(210px, 68px);
+    }
     &__nav {
-        @include flex-row-space-between;
+        @include flexContainer(row, space-between, center);
         width : 200px;
     }
     &__link {
-        font-size: 24px;
-        font-weight: 500;
+        @include fontStyle(24px,500);
         text-decoration: none;
         color: $black-color;
+        &_active {
+            text-decoration: underline;
+        }
+    }
+}
+
+// Media queries
+
+@media screen and (max-width: 768px) {
+    .header {
+        @include flexContainer(row, space-between, center);
+        margin-inline: 20px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .header {
+        @include flexContainer(row, space-between, center);
+        margin-inline: 20px;
+        &__logo {
+            @include dimension(145px, 47px);
+        }
+        &__nav {
+            @include flexContainer(row, space-between, center);
+            width : 130px;
+        }
+        &__link {
+            @include fontStyle(12px,500);
+            text-transform: uppercase;
+            text-decoration: none;
+            color: $black-color;
+            &_active {
+                text-decoration: underline;
+            }
+        }
     }
 }

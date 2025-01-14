@@ -20,8 +20,13 @@ function Slider({pictures}) {
                 {pictures.map((picture, index) => (
                     <img key={index} className={styles.slider__img} src={pictures[currentIndex]} alt={`Slide ${currentIndex + 1}`} />
                 ))}
-                <button onClick={handlePrev}><img className={styles.slider__arrowLeft} src={arrowLeft} alt='Previous' /></button>
-                <button onClick={handleNext}><img className={styles.slider__arrowRight} src={arrowRight} alt='Next' /></button>
+                {pictures.length > 1 && (
+                    <>
+                        <button onClick={handlePrev}><img className={styles.slider__arrowLeft} src={arrowLeft} alt='Previous' /></button>
+                        <button onClick={handleNext}><img className={styles.slider__arrowRight} src={arrowRight} alt='Next' /></button>
+                        <div className={styles.slider__counter}>{currentIndex+1}/{pictures.length}</div>
+                    </>
+                )}
             </div>
         </div>
     )

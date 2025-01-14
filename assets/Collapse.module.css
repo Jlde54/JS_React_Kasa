@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .collapse {
   margin-bottom: 15px;
   font-size: 18px;
@@ -32,15 +33,16 @@
           transform: rotate(180deg);
 }
 .collapse__content {
+  white-space: pre-line; /* appliquer les sauts de ligne présents dans une chaîne */
   max-height: 0;
   font-weight: 400;
   -webkit-transform: translateY(-30px);
           transform: translateY(-30px);
   opacity: 0;
-  -webkit-transition: opacity 1s ease, max-height 1s ease, -webkit-transform 1s ease;
-  transition: opacity 1s ease, max-height 1s ease, -webkit-transform 1s ease;
-  transition: transform 1s ease, opacity 1s ease, max-height 1s ease;
-  transition: transform 1s ease, opacity 1s ease, max-height 1s ease, -webkit-transform 1s ease;
+  -webkit-transition: opacity 0.4s ease, max-height 0.4s ease, -webkit-transform 0.4s ease;
+  transition: opacity 0.4s ease, max-height 0.4s ease, -webkit-transform 0.4s ease;
+  transition: transform 0.4s ease, opacity 0.4s ease, max-height 0.4s ease;
+  transition: transform 0.4s ease, opacity 0.4s ease, max-height 0.4s ease, -webkit-transform 0.4s ease;
 }
 .collapse__content--open {
   max-height: 100px;

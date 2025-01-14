@@ -2,11 +2,14 @@
 @import './-mixins.scss';
 
 .gallery {
-    display: flex;
-    justify-content: flex-start;
+    @include flexContainer (row, space-between, center);
+    // display: flex;
+    // justify-content: flex-start;
+    // justify-content: space-between;
     flex-wrap: wrap;
     gap: 40px;
-    margin-inline: 50px;
+    // margin-inline: 50px;
+    margin: 0 auto;
     padding: 50px;
     background-color: #F6F6F6;
     border-radius: 25px;
@@ -14,4 +17,21 @@
 .gallery::after {
     content: '';
     flex: 1 0 calc((100% / 3) - 40px);
-  }
+}
+
+// Media queries
+
+@media screen and (max-width: 992px) {
+    .gallery {
+        padding: 0px;
+    }
+    .gallery::after {
+        flex: 1 0 calc((100% / 2) - 40px);
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .gallery::after {
+        display: none;
+    }
+}

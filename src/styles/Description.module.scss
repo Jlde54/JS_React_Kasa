@@ -1,0 +1,124 @@
+@import './-variables.scss';
+@import './-mixins.scss';
+
+.description {
+    display: flex;
+    flex-direction: column;
+    &__section0 {
+        @include flexContainer (row, space-between, start);
+        margin-top: 25px;
+        gap: 10px;
+    }
+    &__section1 {
+        @include flexContainer (column, space-between, start);
+    }
+    &__title {
+        color: $primary-color;
+        @include fontStyle (36px, 500);
+    }
+    &__location {
+        @include fontStyle (18px, 500);
+        margin-top: 5px;
+    }
+    &__tags {
+        margin-top: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    &__tag {
+        @include flexContainer (row, center, center);
+        @include dimension (115px, 25px);
+        padding: 10px;
+        background-color: $primary-color;
+        border-radius: 10px;
+        color: $white-color;
+        @include fontStyle (14px, 700);
+    }
+    &__section2 {
+        @include flexContainer (column, space-between, end);
+        gap: 20px;
+    }
+    &__host {
+        @include flexContainer (row, center, center);
+        gap: 20px;
+    }
+    &__name {
+        @include flexContainer (row, center, center);
+        @include dimension (93px, 52px);
+        color: $primary-color;
+        @include fontStyle (18px, 500);
+        text-align: right
+    }
+    &__img {
+        @include dimension (64px, 64px);
+        border-radius: 50%;
+    }
+    &__rating {
+        display: flex;
+        gap: 8px;
+        height: 24px;
+    }
+    &__star {
+        @include dimension (24px, 24px);
+    }
+    &__section3 {
+        @include flexContainer (row, space-between, start);
+        margin-top: 25px;
+    }
+    &__collapse {
+        width: 46%;
+    }
+}
+
+// Media queries
+
+@media screen and (max-width: 992px) {
+}
+
+@media screen and (max-width: 576px) {
+    .description {
+        &__section0 {
+            @include flexContainer (column, space-between, start);
+        }
+        &__title {
+            @include fontStyle (18px, 500);
+        }
+        &__location {
+            @include fontStyle (14px, 500);
+        }
+        &__tag {
+            @include dimension (84px, 18px);
+            @include fontStyle (10px, 700);
+            padding: 5px;
+        }
+        &__section2 {
+            @include flexContainer (row-reverse, space-between, center);
+            gap: 25px;
+            margin-top: 15px;
+            width: 100%;
+        }
+        &__name {
+            @include flexContainer (row, center, center);
+            @include dimension (60px, 33px);
+            @include fontStyle (12px, 500);
+        }
+        &__img {
+            @include dimension (32px, 32px);
+        }
+        &__rating {
+            gap: 4px;
+            height: 18px;
+        }
+        &__star {
+            @include dimension (13px, 13px);
+        }
+        &__section3 {
+            @include flexContainer (column, space-between, start);
+            margin-top: 25px;
+        }
+        &__collapse {
+            width: 100%;
+        }
+    }
+}

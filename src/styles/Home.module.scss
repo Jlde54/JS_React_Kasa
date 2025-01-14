@@ -5,3 +5,17 @@
     margin-inline: 100px;
     margin-block: 50px;
 }
+
+// Media queries
+
+@media screen and (max-width: 768px) {
+    .home {
+        margin-inline: 20px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .home {
+        margin-block: 25px;
+    }
+}

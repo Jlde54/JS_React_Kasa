@@ -35,4 +35,7 @@
   font-weight: 500;
   text-decoration: none;
   color: #000000;
+}
+.header__link_active {
+  text-decoration: underline;
 }/*# sourceMappingURL=Header.module.css.map */
