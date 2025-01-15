@@ -4,12 +4,12 @@ import Collapse from './Collapse.jsx'
 import starRed from '../assets/STAR_red.png'
 import starGrey from '../assets/STAR_grey.png'
 
-function Description({description}) {
-    const equipString = description[4].join('\n')
+function Description({title, host, rating, location, equipments, tags, description}) {
+    const equipString = equipments.join('\n')
 
     const stars = []
     for (let i = 0; i < 5; i++) {
-        if (i < description[2]) {
+        if (i < rating) {
             stars.push(<img key={i} className={styles.description__star} src={starRed} alt="Red star"/>)
         } else {
             stars.push(<img key={i} className={styles.description__star} src={starGrey} alt="Grey star"/>)
@@ -22,10 +22,10 @@ function Description({description}) {
             <div className={styles.description__section0}>
                 {/* Title, location and tags */}
                 <div className={styles.description__section1}>
-                        <div className={styles.description__title}>{description[0]}</div>
-                        <div className={styles.description__location}>{description[3]}</div>
+                        <div className={styles.description__title}>{title}</div>
+                        <div className={styles.description__location}>{location}</div>
                         <div className={styles.description__tags}>
-                        {description[5].map((item, index) => (
+                        {tags.map((item, index) => (
                                 <div key={index} className={styles.description__tag}>{item}</div>
                         ))}
                     </div>
@@ -34,8 +34,8 @@ function Description({description}) {
                 {/* Host and rating */}
                 <div className={styles.description__section2}>
                     <div className={styles.description__host}>
-                        <div className={styles.description__name}>{description[1].name}</div>
-                        <img className={styles.description__img} src={description[1].picture} />
+                        <div className={styles.description__name}>{host.name}</div>
+                        <img className={styles.description__img} src={host.picture} />
                     </div>
                     <div className={styles.description__rating}>
                         {stars}
@@ -46,7 +46,7 @@ function Description({description}) {
             {/* Description and equipments */}
             <div className={styles.description__section3}>
                     <div className={styles.description__collapse} >
-                        <Collapse title="Description" content={description[6]}/>
+                        <Collapse title="Description" content={description}/>
                     </div>
                     <div className={styles.description__collapse} >
                       <Collapse title="Equipements" content={equipString}/>
@@ -57,7 +57,16 @@ function Description({description}) {
 }
 
 Description.propTypes = {
-    description: PropTypes.arrayOf(PropTypes.any).isRequired,
+    title: PropTypes.string.isRequired,
+    host: PropTypes.shape({
+        name: PropTypes.string.isRequired,
+        picture: PropTypes.string.isRequired,
+    }).isRequired,
+    rating: PropTypes.number.isRequired,
+    location: PropTypes.string.isRequired,
+    equipments: PropTypes.arrayOf(PropTypes.string).isRequired,
+    tags: PropTypes.arrayOf(PropTypes.string).isRequired,
+    description: PropTypes.string.isRequired,
 };
 
 export default Description

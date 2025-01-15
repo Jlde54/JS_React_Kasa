@@ -6,14 +6,15 @@
     flex: 1 0 calc((100% / 3) - 40px);
     position: relative;
     @include dimension (30%, 340px);
+    border-radius: 10px;
     &__img {
         @include dimension (100%, 100%);
         object-fit: cover;
-        border-radius: 10px;
+        border-radius: inherit;
     }
     &__overlay {
         background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(10, 10, 10, 0) 42%, rgba(4, 4, 4, 0.2) 99.99%,rgba(0,0,0,0.5) 100%);
-        border-radius: 10px;
+        border-radius: inherit;
         @include dimension (100%, 100%);
         position: absolute;
 

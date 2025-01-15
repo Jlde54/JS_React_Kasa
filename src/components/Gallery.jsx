@@ -4,11 +4,13 @@ import Card from './Card'
 
 function Gallery() {
     return (
-        <div className={styles.gallery}>
+        <section className={styles.gallery}>
             {logements.map((logement) => (
-                <Card key={logement.id} data={logement}/>
+                <Card 
+                    key={logement.id} 
+                    data={logement}/>
             ))}
-        </div>
+        </section>
     )
 }
 

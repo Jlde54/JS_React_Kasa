@@ -4,11 +4,18 @@ import styles from '../styles/A-Propos.module.scss'
 import imgMontain from '../assets/img_montain.png'
 
 function A_Propos() {
-    const text = ""
-    const altText = "Montagnes"
+    const BANNER_DATA = {
+            text: "",
+            imgAlt: "Montagnes",
+            imgSrc: imgMontain
+        }
+
     return (
         <div className={styles.aPropos}>
-            <Banner text={text} img={imgMontain} alt={altText}/>
+            <Banner 
+                text={BANNER_DATA.text} 
+                img={BANNER_DATA.imgSrc} 
+                alt={BANNER_DATA.imgAlt}/>
             <About />
         </div>
     )

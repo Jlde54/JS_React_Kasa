@@ -18,7 +18,10 @@ function Slider({pictures}) {
         <div className={styles.slider}>
             <div className={styles.slider__wrapper}>
                 {pictures.map((picture, index) => (
-                    <img key={index} className={styles.slider__img} src={pictures[currentIndex]} alt={`Slide ${currentIndex + 1}`} />
+                    <img 
+                        key={index} 
+                        className={styles.slider__img} 
+                        src={pictures[currentIndex]} alt={`Slide ${currentIndex + 1}`} />
                 ))}
                 {pictures.length > 1 && (
                     <>

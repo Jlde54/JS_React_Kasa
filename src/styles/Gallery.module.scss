@@ -3,12 +3,8 @@
 
 .gallery {
     @include flexContainer (row, space-between, center);
-    // display: flex;
-    // justify-content: flex-start;
-    // justify-content: space-between;
     flex-wrap: wrap;
     gap: 40px;
-    // margin-inline: 50px;
     margin: 0 auto;
     padding: 50px;
     background-color: #F6F6F6;

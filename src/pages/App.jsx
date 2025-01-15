@@ -9,15 +9,22 @@ import '../styles/App.scss'
 
 function App() {
 
+  const ROUTES = {
+    HOME: '/',
+    APROPOS: '/a-propos',
+    FICHELOGEMENT: '/fiche-logement/:id',
+    ERROR: '*'
+  }
+
   return (
     <>
       <BrowserRouter>
         <Header />
           <Routes>
-            <Route path={'/'} element={<Home />}/>
-            <Route path={'/a-propos'} element={<A_propos />} />
-            <Route path={'/fiche-logement/:id'} element={<Fiche_Logement />} />
-            <Route path={'*'} element={<Error />} />
+            <Route path={ROUTES.HOME} element={<Home />}/>
+            <Route path={ROUTES.APROPOS} element={<A_propos />} />
+            <Route path={ROUTES.FICHELOGEMENT} element={<Fiche_Logement />} />
+            <Route path={ROUTES.ERROR} element={<Error />} />
           </Routes>
         <Footer />
       </BrowserRouter>

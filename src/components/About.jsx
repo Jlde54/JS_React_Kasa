@@ -22,11 +22,14 @@ const data = [
 
 function About() {
     return (
-        <div className={styles.about}>
-            {data.map(({title, content}, index) => (
-                <Collapse key={index} title={title} content={content} />
+        <section className={styles.about}>
+            {data.map(({title, content}) => (
+                <Collapse 
+                key={title} 
+                title={title} 
+                content={content} />
             ))}
-        </div>
+        </section>
     )
 }
 

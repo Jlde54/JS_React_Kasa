@@ -10,25 +10,25 @@ function Fiche_Logement() {
     const param = useParams();
 
     const selectedLogement = logements.find(logement => logement.id === param.id)
+
     if (!selectedLogement) {
         return <Error />
     }
-    const pictures = selectedLogement.pictures
 
-    const description = [
-            selectedLogement.title,
-            selectedLogement.host,
-            selectedLogement.rating,
-            selectedLogement.location,
-            selectedLogement.equipments,
-            selectedLogement.tags,
-            selectedLogement.description
-    ]
+    const { pictures, title, host, rating, location, equipments, tags, description } = selectedLogement;
 
     return (
         <div className={styles.ficheLogement}>
             <Slider pictures={pictures}/>
-            <Description description={description} />
+            <Description 
+                title={title}
+                host={host}
+                rating={parseFloat(rating)}
+                location={location}
+                equipments={equipments}
+                tags={tags}
+                description={description}
+            />
         </div>
     )
 }
