@@ -7,6 +7,10 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -45,8 +49,27 @@
   transition: transform 0.4s ease, opacity 0.4s ease, max-height 0.4s ease, -webkit-transform 0.4s ease;
 }
 .collapse__content--open {
-  max-height: 100px;
+  max-height: 300px;
   -webkit-transform: translateY(0);
           transform: translateY(0);
   opacity: 1;
+}
+
+@media screen and (max-width: 576px) {
+  .collapse {
+    margin-bottom: 0px;
+  }
+  .collapse__header {
+    height: 30px;
+    font-size: 13px;
+    font-weight: 700;
+  }
+  .collapse__arrow {
+    width: 25px;
+    height: 25px;
+  }
+  .collapse__content {
+    font-size: 12px;
+    font-weight: 400;
+  }
 }/*# sourceMappingURL=Collapse.module.css.map */

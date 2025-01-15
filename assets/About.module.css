@@ -8,4 +8,16 @@
           flex-direction: column;
   margin-inline: 100px;
   padding: 30px;
+}
+
+@media screen and (max-width: 992px) {
+  .about {
+    margin-inline: 20px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .about {
+    padding: 0px;
+    margin: 0px;
+  }
 }/*# sourceMappingURL=About.module.css.map */

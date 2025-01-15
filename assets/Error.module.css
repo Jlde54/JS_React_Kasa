@@ -11,6 +11,7 @@
 }
 .error__msg {
   font-size: 36px;
+  font-weight: 500;
   text-decoration: none;
   margin-bottom: 100px;
 }
@@ -20,4 +21,20 @@
 .error__link {
   color: #000000;
   font-size: 18px;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 576px) {
+  .error__404 {
+    font-size: 96px;
+    font-weight: 700;
+  }
+  .error__msg {
+    font-size: 18px;
+    font-weight: 500;
+  }
+  .error__link {
+    font-size: 14px;
+    font-weight: 500;
+  }
 }/*# sourceMappingURL=Error.module.css.map */

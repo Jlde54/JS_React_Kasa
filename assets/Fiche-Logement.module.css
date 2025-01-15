@@ -1,4 +1,15 @@
 .ficheLogement {
   margin-inline: 100px;
   margin-block: 50px;
+}
+
+@media screen and (max-width: 768px) {
+  .ficheLogement {
+    margin-inline: 20px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .ficheLogement {
+    margin-block: 25px;
+  }
 }/*# sourceMappingURL=Fiche-Logement.module.css.map */
