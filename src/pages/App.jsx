@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import Home from './Home.jsx'
 import A_propos from './A-Propos.jsx'
 import Fiche_Logement from './Fiche-Logement.jsx'
@@ -18,7 +18,7 @@ function App() {
 
   return (
     <>
-      <BrowserRouter>
+      <HashRouter>
         <Header />
           <Routes>
             <Route path={ROUTES.HOME} element={<Home />}/>
@@ -27,7 +27,7 @@ function App() {
             <Route path={ROUTES.ERROR} element={<Error />} />
           </Routes>
         <Footer />
-      </BrowserRouter>
+      </HashRouter>
     </>
   )
 }
