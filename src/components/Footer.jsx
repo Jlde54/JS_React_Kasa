@@ -1,5 +1,5 @@
 import styles from '../styles/Footer.module.scss'
-import logoWhite from '../../public/LOGO_white.png'
+import logoWhite from '../assets/LOGO_white.png'
 
 function Footer() {
 

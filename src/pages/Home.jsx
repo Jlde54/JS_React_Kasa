@@ -1,7 +1,7 @@
 import Gallery from '../components/Gallery'
 import Banner from '../components/Banner'
 import styles from '../styles/Home.module.scss'
-import imgCliff from '../../public/img_cliff.png'
+import imgCliff from '../assets/img_cliff.png'
 
 function Home() {
     const BANNER_DATA = {

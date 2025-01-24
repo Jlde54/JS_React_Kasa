@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 import styles from '../styles/Description.module.scss'
 import Collapse from './Collapse.jsx'
-import starRed from '../../public/STAR_red.png'
-import starGrey from '../../public/STAR_grey.png'
+import starRed from '../assets/STAR_red.png'
+import starGrey from '../assets/STAR_grey.png'
 
 function Description({title, host, rating, location, equipments, tags, description}) {
     const equipString = equipments.join('\n')

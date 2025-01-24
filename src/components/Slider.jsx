@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { useState } from 'react'
-import arrowRight from '../../public/arrow_right_white.png'
-import arrowLeft from '../../public/arrow_left_white.png'
+import arrowRight from '../assets/arrow_right_white.png'
+import arrowLeft from '../assets/arrow_left_white.png'
 
 import styles from '../styles/Slider.module.scss'
 
