@@ -1,6 +1,6 @@
 import {NavLink} from 'react-router-dom'
 import styles from '../styles/Header.module.scss'
-import logoRed from '../assets/LOGO_red.png'
+import logoRed from '../../public/LOGO_red.png'
 
 function Header() {
 

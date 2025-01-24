@@ -1,7 +1,7 @@
 import { useState } from "react"
 import PropTypes from "prop-types"
 import styles from '../styles/Collapse.module.scss'
-import arrowUp from '../assets/arrow_up_white.png'
+import arrowUp from '../../public/arrow_up_white.png'
 
 function Collapse({title, content}) {
     const [isOpen, setIsOpen] = useState(false)
