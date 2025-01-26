@@ -10,9 +10,9 @@
     background-color: #F6F6F6;
     border-radius: 25px;
 }
-.gallery::after {
-    content: '';
-    flex: 1 0 calc((100% / 3) - 40px);
+.gallery::after {   /* Ajustement dernière ligne à gauche */
+    content: '';    /* Ajout pseudo-élément vide */
+    flex: 1 0 calc((100% / 3) - 40px);  /* largeur des cartes en tenant compte de 3 cartes par ligne */
 }
 
 // Media queries
@@ -22,12 +22,12 @@
         padding: 0px;
     }
     .gallery::after {
-        flex: 1 0 calc((100% / 2) - 40px);
+        flex: 1 0 calc((100% / 2) - 40px);  /* largeur des cartes en tenant compte de 2 cartes par ligne */
     }
 }
 
 @media screen and (max-width: 576px) {
     .gallery::after {
-        display: none;
+        display: none;  /* pseudo-élément supprimé */
     }
 }

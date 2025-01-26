@@ -45,11 +45,6 @@
         &__link {
             @include fontStyle(12px,500);
             text-transform: uppercase;
-            text-decoration: none;
-            color: $black-color;
-            &_active {
-                text-decoration: underline;
-            }
         }
     }
 }
