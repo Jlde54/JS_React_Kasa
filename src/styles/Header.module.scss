@@ -4,6 +4,7 @@
 .header {
     @include flexContainer(row, space-between, center);
     margin-inline: 100px;
+    margin-top: 20px;
     &__logo {
         @include dimension(210px, 68px);
     }

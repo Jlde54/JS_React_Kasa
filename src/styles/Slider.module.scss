@@ -15,7 +15,7 @@
         @include dimension (100%, 415px);
         object-fit: cover;
         border-radius: 25px;
-        flex-shrink: 0;
+        flex-shrink: 0; // l'img conserve sa largeur d'origine même si le conteneur est trop petit
     }
     &__arrowLeft, &__arrowRight {
         position: absolute;

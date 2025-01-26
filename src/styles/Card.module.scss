@@ -3,7 +3,7 @@
 
 .card {
     @include flexContainer (column, end, start);
-    flex: 1 0 calc((100% / 3) - 40px);
+    flex: 1 0 calc((100% / 3) - 40px);  // 40px = gap défini dans gallery
     position: relative;
     @include dimension (30%, 340px);
     border-radius: 10px;
@@ -31,7 +31,7 @@
 
 @media screen and (max-width: 992px) {
     .card {
-        flex: 1 0 calc((100% / 2) - 40px);
+        flex: 1 0 calc((100% / 2) - 40px);  // 40px = gap défini dans gallery
     }
 }
 
